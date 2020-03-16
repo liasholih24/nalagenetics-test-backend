@@ -1,0 +1,25 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nalagenetics test backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "format": "prettier --config .prettierrc --write src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liasholih24/nalagenetics-test-backend.git"
+  },
+  "author": "Siti Sholihah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liasholih24/nalagenetics-test-backend/issues"
+  },
+  "homepage": "https://github.com/liasholih24/nalagenetics-test-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "newsapi": "^2.4.0"
+  },
+  "devDependencies": {}
+}
