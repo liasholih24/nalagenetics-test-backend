@@ -26,16 +26,6 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: 6,
       trim: true,
-    },
-    phoneNumber :{
-      type : String,
-      required : false,
-      trim : true
-    },
-    address : {
-      type : String,
-      required : false,
-      trim : true
     }
   },
   {
