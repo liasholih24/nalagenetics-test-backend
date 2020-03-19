@@ -30,16 +30,4 @@ router.post('/users/login', async (req, res) => {
   }
 })
 
-//logout
-router.post('/users/logout', auth, async (req, res) => {
-  try {
-    req.user.token = req.token
-    await req.user.save()
-
-    res.send({ message: 'Logout Success' })
-  } catch (e) {
-    res.status(500).send({ message: 'Logout Gagal' })
-  }
-})
-
 module.exports = router

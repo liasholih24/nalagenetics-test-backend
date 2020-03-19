@@ -34,9 +34,13 @@ router.post('/news', auth, async (req, res) => {
 
 
 // get news by id
-router.get('/news/:id', auth, async (req, res) => {
+router.get('/news', auth, async (req, res) => {
     try {
-        let news = await News.find({ userId : new ObjectId(req.params.userId) } )
+        let news = await News.find(
+            {
+                userId : { $regex : new RegExp(req.query.userId, "i")}
+            }
+        )
         res.status(200).send(news) 
            
     } catch (e) {
